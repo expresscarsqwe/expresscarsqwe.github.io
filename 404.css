@@ -1,0 +1,32 @@
+/* Для кнопки */
+.shine-button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 10px 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #00fff2;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #00fff2;
+  transition: .2s ease-in-out;
+}
+.shine-button:before {
+  content: "";
+  background: linear-gradient(to right, #6814cd 0%, #3163f3 100%);
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  transform: skewX(-45deg);
+}
+.shine-button:hover {
+  background: #00fff2;
+  color: #fff;
+}
+.shine-button:hover:before {
+  left: 150px;
+  transition: .5s ease-in-out;
+}
