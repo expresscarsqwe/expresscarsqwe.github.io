@@ -10,7 +10,7 @@ const boxtext = document.getElementById("products");
 const p1 = [
     {
         "TITLE": "ПК диагностика",
-        "LORE": "Компьютерная диагностика автомобиля",
+        "LORE": "Компьютерная диагностика автомобиля, адаптация дросселя и др.",
         "SUM": "от 500 ₽",
         "IMG": "img/products/1.jpg",
         "TEXTBTN": "Подробнее",
