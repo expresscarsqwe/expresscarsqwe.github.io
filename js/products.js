@@ -20,7 +20,7 @@ const p1 = [
 const p2 = [
     {
         "TITLE": "Эндоскопия двигателя",
-        "LORE": "Эндоскопия двигателя и катализатора<br><br><wbr>",
+        "LORE": "Эндоскопия двигателя и катализатора<br><br><wbr white-space: pre>",
         "SUM": "от 500 ₽",
         "IMG": "img/products/2.jpg",
         "TEXTBTN": "Подробнее",
