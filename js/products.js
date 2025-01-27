@@ -20,7 +20,7 @@ const p1 = [
 const p2 = [
     {
         "TITLE": "Эндоскопия двигателя",
-        "LORE": "Эндоскопия двигателя и катализатора<br><br>ㅤ",
+        "LORE": "Эндоскопия двигателя и катализатора<br><br><wbr>",
         "SUM": "от 500 ₽",
         "IMG": "img/products/2.jpg",
         "TEXTBTN": "Подробнее",
@@ -31,7 +31,7 @@ const p2 = [
 const p3 = [
     {
         "TITLE": "Ремонт гбц",
-        "LORE": "<br>Полный ремонт ГБЦ<br><br><br>ㅤ",
+        "LORE": "<br>Полный ремонт ГБЦ<br><br><br><wbr>",
         "SUM": "от 5 000 ₽",
         "IMG": "img/products/3.jpg",
         "TEXTBTN": "Подробнее",
@@ -86,7 +86,7 @@ const p7 = [
 const p8 = [
     {
         "TITLE": "Плановое ТО",
-        "LORE": "<br><br>Замена масла, фильтров.",
+        "LORE": "Замена масла, фильтров.<br><br><wbr>",
         "SUM": "от 500 ₽",
         "IMG": "img/products/8.jpg",
         "TEXTBTN": "Подробнее",
@@ -97,7 +97,7 @@ const p8 = [
 const p9 = [
     {
         "TITLE": "Тормозная система",
-        "LORE": "Диагностика тормозных систем<br><br>",
+        "LORE": "Диагностика тормозных систем<br><br><wbr>",
         "SUM": "от 500 ₽",
         "IMG": "img/products/9.jpg",
         "TEXTBTN": "Подробнее",
