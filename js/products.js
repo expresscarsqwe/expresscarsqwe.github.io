@@ -2,7 +2,6 @@
 THIS CODE BY zoliryzik
 */
 const boxProducts = document.getElementById("products");
-const boxtext = document.getElementById("products");
 /*
 ЗАПОЛНИТЕЛИ УСЛУГ 
 */
@@ -21,7 +20,7 @@ const p1 = [
 const p2 = [
     {
         "TITLE": "Эндоскопия двигателя",
-        "LORE": "Эндоскопия двигателя и катализатора",
+        "LORE": "Эндоскопия двигателя и катализатора<br><br>",
         "SUM": "от 500 ₽",
         "IMG": "img/products/2.jpg",
         "TEXTBTN": "Подробнее",
@@ -32,7 +31,7 @@ const p2 = [
 const p3 = [
     {
         "TITLE": "Ремонт гбц",
-        "LORE": "<br>Полный ремонт ГБЦ",
+        "LORE": "<br>Полный ремонт ГБЦ<br><br><br>",
         "SUM": "от 5 000 ₽",
         "IMG": "img/products/3.jpg",
         "TEXTBTN": "Подробнее",
@@ -98,7 +97,7 @@ const p8 = [
 const p9 = [
     {
         "TITLE": "Тормозная система",
-        "LORE": "<br><br>Диагностика тормозных систем",
+        "LORE": "Диагностика тормозных систем<br><br>",
         "SUM": "от 500 ₽",
         "IMG": "img/products/9.jpg",
         "TEXTBTN": "Подробнее",
