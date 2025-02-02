@@ -276,7 +276,7 @@ background-attachment: fixed;
 body {font-family: Arial, Helvetica, sans-serif;}
     
 /* Модальный (фон) */
-.modalq {
+.modal {
   display: none; /* Скрыто по умолчанию */
   position: fixed; /* Оставаться на месте */
   z-index: 1; /* Сидеть на вершине */
@@ -291,7 +291,7 @@ body {font-family: Arial, Helvetica, sans-serif;}
 }
 
 /* Модальное содержание */
-.modalq-content {
+.modal-content {
   position: relative;
   background-color: #006400;
   margin: auto;
@@ -331,15 +331,15 @@ body {font-family: Arial, Helvetica, sans-serif;}
   cursor: pointer;
 }
 
-.modalq-header {
+.modal-header {
   padding: 2px 16px;
   background-color: #5cb85c;
   color: white; /*  основной цвет элемент */
 }
 
-.modalq-body {padding: 2px 16px;}
+.modal-body {padding: 2px 16px;}
 
-.modalq-footer {
+.modal-footer {
   padding: 2px 16px;
   background-color: #5cb85c;
   color: white; /*  основной цвет элемент */
