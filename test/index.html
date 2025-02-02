@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Модальные окна</title>
+    </style><link type="text/css"  rel="stylesheet" href="https://www.expresscarspenza.ru/css/stile.css" /><!-- Подключение файла со стилями -->
+    <style>
+        .button {
+          background-color: #1e7b76; /* #4CAF50 Зелёный */ /* цвет фона элемента */
+          border: none; /* удаляет все границы у элемента, делая его без рамки */
+          color: rgb(63, 48, 48); /*  основной цвет элемент */
+          padding: 15px 32px; /* внутренний отступ элемента */
+          text-align: center; /* Выравнивания текста */
+          text-decoration: none; /* декоративные линии тексту */
+          display: inline-block;
+          font-size: 16px; /* становка размера шрифта */
+}
+        html {
+          background-color: #251f1f;
+        }
+        /* Стили для модальных окон */
+        .modal {
+            display: none; /* Скрыто по умолчанию */
+            position: fixed; /* Остается на месте */
+            z-index: 1; /* На переднем плане */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto; /* Включает прокрутку, если необходимо */
+            background-color: rgb(0,0,0); /* Черный фон с прозрачностью */
+            background-color: rgba(0,0,0,0.4); /* Черный фон с прозрачностью */
+        }
+
+        /* Модальное содержимое */
+        .modal-content {
+            background-color: rgb(0,144,255);
+            margin: 15% auto; /* 15% сверху и центрирование */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%; /* Ширина */
+        }
+
+        /* Кнопка закрытия */
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Пример модальных окон</h2>
+
+<!-- Кнопки для открытия модальных окон -->
+<button id="btn1">Открыть модальное окно 1</button>
+<button id="btn2">Открыть модальное окно 2</button>
+<button id="btn3">Открыть модальное окно 3</button>
+<button id="btn4">Открыть модальное окно 4</button>
+<button id="btn5">Открыть модальное окно 5</button>
+<button id="btn6">Открыть модальное окно 6</button>
+<button id="btn7">Открыть модальное окно 7</button>
+<button id="btn8">Открыть модальное окно 8</button>
+<button id="btn9">Открыть модальное окно 9</button>
+<button id="btn10">Открыть модальное окно 10</button>
+
+<!-- Модальные окна -->
+<div id="modal1" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal1q">&times;</span>
+<!-- Вверкних остров, то что наверху -->
+<img class='modal-img' src='https://www.expresscarspenza.ru/img/products/1.jpg' width="10" height="10"> 
+<!-- Вверкних остров, то что наверху -->
+          <h1>Заказать услугу</h1>
+          <div class="modal-body"></div>
+          <p><h3>Эндоскопия двигателя</h3><h3>Эндоскопия двигателя и катализатора</h3></p><br><br><br><br><!--  CODE BY zoliryzik -->
+
+              <!-- Кнопки, где можно связаться -->
+              <br><a href="tel:79603211010" class="shine-button">Позвонить</a>
+              <a href="https://t.me/+79603211010" class="shine-button">Телеграм</a>
+              <a href="https://wa.me/79603211010" class="shine-button">WhatsApp</a>
+        </div>
+  </div>
+</div>
+
+
+    <!-- Модальное окно 1 -->
+    <div id="modal11" class="modal">
+    
+        <!-- Модальное содержание -->
+        <div class="modal-content">
+          <div class="modal-header">
+      <!-- Кнопка закрытия модального окна -->
+            <span class="close" data-modal="modal1">&times;</span>
+      <!-- Вверкних остров, то что наверху -->
+            <h2>Заказать услугу</h2>
+          </div>
+          <div class="modal-body">
+      <!-- Картинка товара -->
+              <img class='modal-img' src='img/products/1.jpg'> 
+      <!-- Описание товара -->
+            <p><h1>ПК диагностика</h1><h3>Компьютерная диагностика автомобиля, адаптация дросселя и др.</h3></p><br><!--  CODE BY zoliryzik -->
+      <!-- Информация о связи -->
+            <p>Чтобы заказать данную услугу напишите нам или позвоните</p><br>
+      <!-- Кнопки, где можно связаться -->
+            <br><a href="tel:79603211010" class="shine-button">Позвонить</a>
+            <a href="https://t.me/+79603211010" class="shine-button">Телеграм</a>
+            <a href="https://wa.me/79603211010" class="shine-button">WhatsApp</a>
+            </div>
+      <!-- Нижний остров, то что снизу -->
+          <div class="modal-footer">
+            <h3><br></h3>
+          </div>
+        </div>
+      
+      </div>
+
+
+<div id="modal2" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal2">&times;</span>
+      <h2>Заказать услугу</h2>
+    <p>Это модальное окно 2.</p>
+  </div>
+</div>
+
+<div id="modal3" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal3">&times;</span>
+      <h2>Заказать услугу</h2>
+    <p>Это модальное окно 3.</p>
+  </div>
+</div>
+
+<div id="modal4" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal4">&times;</span>
+      <h2>Заказать услугу</h2>
+    <p>Это модальное окно 4.</p>
+  </div>
+</div>
+
+<div id="modal5" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal5">&times;</span>
+      <h2>Заказать услугу</h2>
+    <p>Это модальное окно 5.</p>
+  </div>
+</div>
+
+<div id="modal6" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal6">&times;</span>
+      <h2>Заказать услугу</h2>
+    <p>Это модальное окно 6.</p>
+  </div>
+</div>
+
+<div id="modal7" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal7">&times;</span>
+      <h2>Заказать услугу</h2>
+    <p>Это модальное окно 7.</p>
+  </div>
+</div>
+
+<div id="modal8" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal8">&times;</span>
+      <h2>Заказать услугу</h2>
+    <p>Это модальное окно 8.</p>
+  </div>
+</div>
+
+<div id="modal9" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal9">&times;</span>
+      <h2>Заказать услугу</h2>
+    <p>Это модальное окно 9.</p>
+  </div>
+</div>
+
+<div id="modal10" class="modal">
+  <div class="modal-content">
+    <span class="close" data-modal="modal10">&times;</span>
+      <h2>Заказать услугу</h2>
+    <p>Это модальное окно 10.</p>
+  </div>
+</div>
+
+<script>
+    // Функция для открытия модального окна
+    function openModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "block";
+    }
+
+    // Функция для закрытия модального окна
+    function closeModal(modalId) {
+        var modal = document.getElementById(modalId);
+        modal.style.display = "none";
+    }
+
+    // Получаем все кнопки и добавляем обработчики событий
+    var buttons = document.querySelectorAll("button[id^='btn']");
+    buttons.forEach(function(button) {
+        button.onclick = function() {
+            var modalId = "modal" + this.id.replace("btn", "");
+            openModal(modalId);
+        }
+    });
+
+    // Получаем все элементы <span> для закрытия модальных окон
+    var spans = document.querySelectorAll(".close");
+    spans.forEach(function(span) {
+        span.onclick = function() {
+            var modalId = this.getAttribute("data-modal");
+            closeModal(modalId);
+        }
+    });
+
+    // Закрытие модального окна при клике вне его
+    window.onclick = function(event) {
+        if (event.target.classList.contains("modal")) {
+            closeModal(event.target.id);
+        }
+    }
+</script>
+<style>
+    .social-links {
+        margin-top: 20px;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+        margin-right: 15px;
+        transition: transform 0.3s ease;
+    }
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center; /* Центрируем товары */
+}
+
+    .social-icon:hover {
+        transform: scale(1.2);
+    }
+
+    /* Новый стиль для фиолетовой полоски */
+    .purple-stripe {
+        background-color: #7d06d9;
+        height: 2px;
+        width: 100%;
+        margin-top: 20px;
+    }
+</style>
+</body>
+</html>
