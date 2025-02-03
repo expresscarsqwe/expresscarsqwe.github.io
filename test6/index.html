@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Модальное окно для 9 услуг</title>
+    <style>
+        /* Стили для затемнения фона при открытии модального окна */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+        }
+
+        /* Основные стили для модального окна */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            max-width: 600px;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1001;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        /* Стили для кнопки закрытия модального окна */
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        /* Стили для содержимого модального окна */
+        .modal-content img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .modal-content h2 {
+            margin-top: 20px;
+        }
+
+        .modal-content p {
+            margin: 10px 0;
+        }
+
+        .modal-content .price {
+            font-size: 24px;
+            color: #28a745;
+            margin: 20px 0;
+        }
+
+        .modal-content .btn-group {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .modal-content .btn {
+            background: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .modal-content .btn:hover {
+            background: #0056b3;
+        }
+
+        /* Стили для услуг */
+        .service {
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Кнопка для открытия модального окна -->
+    <button class="open-modal-btn" onclick="openModal()">Открыть модальное окно</button>
+
+    <!-- Затемнение фона при открытии модального окна -->
+    <div class="modal-overlay" id="modalOverlay"></div>
+
+    <!-- Модальное окно -->
+    <div class="modal" id="modal">
+        <!-- Кнопка закрытия модального окна -->
+        <button class="modal-close" onclick="closeModal()">&times;</button>
+        
+        <!-- Содержимое модального окна -->
+        <div class="modal-content">
+            <!-- Услуга 1 -->
+            <div class="service">
+                <img src="https://via.placeholder.com/600x400" alt="Service Image 1">
+                <h2>Название услуги 1</h2>
+                <p>Описание услуги 1. Это краткое описание, которое рассказывает о преимуществах и особенностях.</p>
+                <div class="price">Цена: $99.99</div>
+                <div class="btn-group">
+                    <button class="btn">Позвонить</button>
+                    <button class="btn">Написать</button>
+                    <button class="btn">Написать</button>
+                </div>
+            </div>
+            <!-- Услуга 2 -->
+            <div class="service">
+                <img src="https://via.placeholder.com/600x400" alt="Service Image 2">
+                <h2>Название услуги 2</h2>
+                <p>Описание услуги 2. Это краткое описание, которое рассказывает о преимуществах и особенностях.</p>
+                <div class="price">Цена: $149.99</div>
+                <div class="btn-group">
+                    <button class="btn">Позвонить</button>
+                    <button class="btn">Написать</button>
+                    <button class="btn">Написать</button>
+                </div>
+            </div>
+            <!-- Услуга 3 -->
+            <div class="service">
+                <img src="https://via.placeholder.com/600x400" alt="Service Image 3">
+                <h2>Название услуги 3</h2>
+                <p>Описание услуги 3. Это краткое описание, которое рассказывает о преимуществах и особенностях.</п>
+                <div class="price">Цена: $199.99</div>
+                <div class="btn-group">
+                    <button class="btn">Позвонить</button>
+                    <button class="btn">Написать</button>
+                    <button class="btn">Написать</button>
+                </div>
+            </div>
+            <!-- Услуга 4 -->
+            <div class="service">
+                <img src="https://via.placeholder.com/600x400" alt="Service Image 4">
+                <h2>Название услуги 4</h2>
+                <п>Описание услуги 4. Это краткое описание, которое рассказывает о преимуществах и особенностях.</п>
+                <div class="price">Цена: $249.99</div>
+                <div class="btn-group">
+                    <button class="btn">Позвонить</button>
+                    <button class="btn">Написать</button>
+                    <button class="btn">Написать</button>
+                </div>
+            </div>
+            <!-- Услуга 5 -->
+            <div class="service">
+                <img src="https://via.placeholder.com/600x400" alt="Service Image 5">
+                <h2>Название услуги 5</h2>
+                <п>Описание услуги 5. Это краткое описание, которое рассказывает о преимуществах и особенностях.</п>
+                <div class="price">Цена: $299.99</div>
+                <div class="btn-group">
+                    <button class="btn">Позвонить</button>
+                    <button class="btn">Написать</button>
+                    <button class="btn">Написать</button>
+                </div>
+            </div>
+            <!-- Услуга 6 -->
+            <div class="service">
+                <img src="https://via.placeholder.com/600x400" alt="Service Image 6">
+                <h2>Название услуги 6</h2>
+                <п>Описание услуги 6. Это краткое описание, которое рассказывает о преимуществах и особенностях.</п>
+                <div class="price">Цена: $349.99</div>
+                <div class="btn-group">
+                    <button class="btn">Позвонить</button>
+                    <button class="btn">Написать</button>
+                    <button class="btn">Написать</button>
+                </div>
+            </div>
+            <!-- Услуга 7 -->
+            <div class="service">
+                <img src="https://via.placeholder.com/600x400" alt="Service Image 7">
+                <h2>Название услуги 7</h2>
+                <п>Описание услуги 7. Это краткое описание, которое рассказывает о преимуществах и особенностях.</п>
+                <div class="price">Цена: $399.99</div>
+                <div class="btn-group">
+                    <button class="btn">Позвонить</button>
+                    <button class="btn">Написать</button>
+                    <button class="btn">Написать</button>
+                </div>
+            </div>
+            <!-- Услуга 8 -->
+            <div class="service">
+                <img src="https://via.placeholder.com/600x400" alt="Service Image 8">
+                <h2>Название услуги 8</h2>
+                <п>Описание услуги 8. Это краткое описание, которое рассказывает о преимуществах и особенностях.</п>
+                <div class="price">Цена: $449.99</div>
+                <div class="btn-group">
+                    <button class="btn">Позвонить</button>
+                    <button class="btn">Написать</button>
+                    <button class="btn">Написать</button>
+                </div>
+            </div>
+            <!-- Услуга 9 -->
+            <div class="service">
+                <img src="https://via.placeholder.com/600x400" alt="Service Image 9">
+                <h2>Название услуги 9</h2>
+                <п>Описание услуги 9. Это краткое описание, которое рассказывает о преимуществах и особенностях.</п>
+                <div class="price">Цена: $499.99</div>
+                <div class="btn-group">
+                    <button class="btn">Позвонить</button>
+                    <button class="btn">Напис
