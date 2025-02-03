@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Услуги</title>
+    <title>Вертикальные баннеры с услугами</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,31 +13,33 @@
         .search-bar {
             margin-bottom: 20px;
         }
-        .service {
+        .banner {
             background-color: #fff;
             padding: 15px;
             border-radius: 5px;
             margin-bottom: 10px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        .service h3 {
+        .banner h3 {
             margin-top: 0;
         }
     </style>
     <script>
-        function searchServices() {
-            var input, filter, services, service, title, i, txtValue;
+        function searchBanners() {
+            var input, filter, banners, banner, title, description, i, txtValue;
             input = document.getElementById('searchInput');
             filter = input.value.toUpperCase();
-            services = document.getElementsByClassName('service');
-            for (i = 0; i < services.length; i++) {
-                service = services[i];
-                title = service.getElementsByTagName("h3")[0];
+            banners = document.getElementsByClassName('banner');
+            for (i = 0; i < banners.length; i++) {
+                banner = banners[i];
+                title = banner.getElementsByTagName("h3")[0];
+                description = banner.getElementsByTagName("p")[0];
                 txtValue = title.textContent || title.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    service.style.display = "";
+                txtDescription = description.textContent || description.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1 || txtDescription.toUpperCase().indexOf(filter) > -1) {
+                    banner.style.display = "";
                 } else {
-                    service.style.display = "none";
+                    banner.style.display = "none";
                 }
             }
         }
@@ -46,18 +48,18 @@
 <body>
     <h1>Наши услуги</h1>
     <div class="search-bar">
-        <input type="text" id="searchInput" onkeyup="searchServices()" placeholder="Поиск услуг...">
+        <input type="text" id="searchInput" onkeyup="searchBanners()" placeholder="Поиск услуг...">
     </div>
 
-    <div class="service">
+    <div class="banner">
         <h3>Услуга 1</h3>
         <p>Описание услуги 1: Это пример первой услуги, предлагаемой нашей компанией.</p>
     </div>
-    <div class="service">
+    <div class="banner">
         <h3>Услуга 2</h3>
         <p>Описание услуги 2: Это пример второй услуги, предлагаемой нашей компанией.</p>
     </div>
-    <div class="service">
+    <div class="banner">
         <h3>Услуга 3</h3>
         <p>Описание услуги 3: Это пример третьей услуги, предлагаемой нашей компанией.</p>
     </div>
