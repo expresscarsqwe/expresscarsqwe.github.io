@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Услуги</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .service {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .service h3 {
+            margin-top: 0;
+        }
+    </style>
+    <script>
+        function searchServices() {
+            var input, filter, services, service, title, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            services = document.getElementsByClassName('service');
+            for (i = 0; i < services.length; i++) {
+                service = services[i];
+                title = service.getElementsByTagName("h3")[0];
+                txtValue = title.textContent || title.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    service.style.display = "";
+                } else {
+                    service.style.display = "none";
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Наши услуги</h1>
+    <div class="search-bar">
+        <input type="text" id="searchInput" onkeyup="searchServices()" placeholder="Поиск услуг...">
+    </div>
+
+    <div class="service">
+        <h3>Услуга 1</h3>
+        <p>Описание услуги 1: Это пример первой услуги, предлагаемой нашей компанией.</p>
+    </div>
+    <div class="service">
+        <h3>Услуга 2</h3>
+        <p>Описание услуги 2: Это пример второй услуги, предлагаемой нашей компанией.</p>
+    </div>
+    <div class="service">
+        <h3>Услуга 3</h3>
+        <p>Описание услуги 3: Это пример третьей услуги, предлагаемой нашей компанией.</p>
+    </div>
+</body>
+</html>
