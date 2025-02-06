@@ -12,7 +12,9 @@ THIS CODE BY zoliryzik
     box-sizing: border-box; /* сообщает браузеру, что значения, указанные для ширины и высоты элемента, будут включать содержимое, отступы и границы. */
     
 }
-
+.text_404 {
+  pointer-events: none;
+}
 .modal-img {
   width: 250px;
   height: 250px;
