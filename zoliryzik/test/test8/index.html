@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск по услугам</title>
+    <style>
+        /* Стили для формы поиска, карточек услуг и модального окна */
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .card {
+            border: 1px solid #ccc;
+            padding: 16px;
+            margin: 16px 0;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .results {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 1px solid #ccc;
+            padding: 16px;
+            background: white;
+            z-index: 1000;
+            max-width: 600px;
+            width: 100%;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <h1>Поиск по услугам</h1>
+        <!-- Форма поиска -->
+        <input type="text" id="searchQuery" placeholder="Введите название услуги...">
+        <!-- Контейнер для отображения результатов -->
+        <div class="results" id="results"></div>
+    </div>
+
+    <!-- Модельное окно -->
+    <div class="overlay" id="overlay"></div>
+    <div class="modal" id="modal">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <button onclick="closeModal()">Закрыть</button>
+    </div>
+
+    <script>
+        const services = [
+            { id: 1, name: 'Автомойка', description: 'Мойка кузова и салона' },
+            { id: 2, name: 'Шиномонтаж', description: 'Замена шин и балансировка' },
+            { id: 3, name: 'Техосмотр', description: 'Полный технический осмотр' },
+            // Добавьте свои услуги здесь
+        ];
+
+        document.getElementById('searchQuery').addEventListener('input', function(event) {
+            const query = event.target.value;
+            searchServices(query);
+        });
+
+        function searchServices(query) {
+            const resultsContainer = document.getElementById('results');
+            resultsContainer.innerHTML = ''; // Очистка предыдущих результатов
+
+            const filteredServices = services.filter(service => 
+                service.name.toLowerCase().includes(query.toLowerCase())
+            );
+
+            if (filteredServices.length > 0) {
+                filteredServices.forEach(service => {
+                    const serviceElement = document.createElement('div');
+                    serviceElement.classList.add('card');
+                    serviceElement.innerHTML = `
+                        <h2>${service.name}</h2>
+                        <p>${service.description}</p>
+                    `;
+                    serviceElement.addEventListener('click', () => {
+                        openModal(service);
+                    });
+                    resultsContainer.appendChild(serviceElement);
+                });
+            } else {
+                resultsContainer.innerHTML = '<p>Услуги не найдены.</p>';
+            }
+        }
+
+        function openModal(service) {
+            document.getElementById('modalTitle').innerText = service.name;
+            document.getElementById('modalDescription').innerText = service.description;
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
