@@ -181,6 +181,7 @@ background-attachment: fixed;
   position: relative;
   left: 13px;
   right: 15px;
+  background-position: center;
 }
 
 .card {
