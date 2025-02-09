@@ -176,6 +176,11 @@ background-attachment: fixed;
   justify-content: space-between;
   max-width: 1200px;
   padding: 20px;
+  font-size: initial;
+  width: 100%;
+  position: relative;
+  left: 13px;
+  right: 10px;
 }
 
 .card {
