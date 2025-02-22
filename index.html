@@ -491,19 +491,19 @@
 <!-- Скрипт кнопок -->
 
     <!--  CODE BY zoliryzik --><script>
-       / Функция для открытия модального окна
+       // Функция для открытия модального окна
         function openModal(modalId) {
             var modal = document.getElementById(modalId);
             modal.style.display = "block";
         }
     
-       / Функция для закрытия модального окна
+       // Функция для закрытия модального окна
         function closeModal(modalId) {
             var modal = document.getElementById(modalId);
             modal.style.display = "none";
         }
     
-       / Получаем все кнопки и добавляем обработчики событий
+       // Получаем все кнопки и добавляем обработчики событий
         var buttons = document.querySelectorAll("button[id^='btn']");
         buttons.forEach(function(button) {
             button.onclick = function() {
@@ -512,7 +512,7 @@
             }
         });
     
-       / Получаем все элементы <span> для закрытия модальных окон
+       // Получаем все элементы <span> для закрытия модальных окон
         var spans = document.querySelectorAll(".close");
         spans.forEach(function(span) {
             span.onclick = function() {
@@ -521,7 +521,7 @@
             }
         });
     
-       / Закрытие модального окна при клике вне его
+       // Закрытие модального окна при клике вне его
         window.onclick = function(event) {
             if (event.target.classList.contains("modal")) {
                 closeModal(event.target.id);
