@@ -270,7 +270,6 @@
     </div><!--  CODE BY zoliryzik -->
     
 </footer>
-<script src="/js/date.js">
     
     <!-- Тест мод окно -->
     <div id="moda11" class="modal">
@@ -550,5 +549,12 @@
             }
         }
     </script><!--  CODE BY zoliryzik -->
+
+        <script>
+        // Получаем текущий год
+        const currentYear = new Date().getFullYear();
+        // Находим элемент с id "current-year" и устанавливаем его текстом текущий год
+        document.getElementById('current-year').textContent = currentYear;
+    </script>
 </body>
 </html>
