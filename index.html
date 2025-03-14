@@ -573,24 +573,28 @@ a {
 
 <!-- Скрипт поиска-->
     <!--  CODE BY zoliryzik --><script>
-        function searchProducts() {
-            var input, filter, container, cards, h3, div, i, txtValue;
-            input = document.getElementById('searchInput');
-            filter = input.value.toUpperCase();
-            container = document.getElementById('productContainer');
-            cards = container.getElementsByClassName('card');
-            for (i = 0; i < cards.length; i++) {
-                h3 = cards[i].getElementsByTagName('h3')[0];
-                div = cards[i].getElementsByTagName('card-databox__description')[0];
-                txtValue = h3.textContent || h3.innerText || div.textContent || div.innerText;
-                if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                    cards[i].style.display = "";
-                } else {
-                    cards[i].style.display = "none";
-                }
+    function searchProducts() {
+        var input, filter, container, cards, h3, div, i, txtValue;
+        input = document.getElementById('searchInput');
+        filter = input.value.toUpperCase();
+        container = document.getElementById('productContainer');
+        cards = container.getElementsByClassName('card');
+        for (i = 0; i < cards.length; i++) {
+            h3 = cards[i].getElementsByTagName('h3')[0];
+            div = cards[i].getElementsByTagName('card-databox__description')[0];
+            p = cards[i].getElementsByTagName('p')[0];
+            txtValue = h3.textContent || h3.innerText || div.textContent || div.innerText;
+            txtValueq = p.textContent || p.innerText || div.textContent || div.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                cards[i].style.display = "";
+            } if (txtValueq.toUpperCase().indexOf(filter) > -1) {
+                cards[i].style.display = "";
+            } else {
+                cards[i].style.display = "none";
             }
         }
-    </script><!--  CODE BY zoliryzik -->
+    }
+</script><!--  CODE BY zoliryzik -->
 
         <script>
         // Получаем текущий год
