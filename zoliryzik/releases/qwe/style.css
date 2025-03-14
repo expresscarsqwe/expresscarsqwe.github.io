@@ -2,8 +2,30 @@
     margin: 0; /* Отступы от каждого края */
     padding: 0; /* дополнительный отступ */
     box-sizing: border-box; /* сообщает браузеру, что значения, указанные для ширины и высоты элемента, будут включать содержимое, отступы и границы. */
-    
+body {
+    font-family: 'Roboto', sans-serif; /* установливает как основной шрифт */
+    background-color: #181818; /* цвет фона элемента */
+    color: #f1f1f1; /*  основной цвет элемент */
+    line-height: 1.6; /* задает межстрочный интервал */
+   
 }
+
+header {
+    background-color: #121212; /* цвет фона элемента */
+    color: #fff; /*  основной цвет элемент */
+    padding: 30px 0; /* внутренний отступ элемента */
+    text-align: center; /* Выравнивания текста */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* тень к элементу */
+}
+/* Стили авы */ 
+.navbar-logo {
+	display: inline-block;
+		/*background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/background.png);*/
+	color: #fff; /*  основной цвет элемент */
+	font-family: sans-serif;
+	background-size: cover;
+	background-attachment: fixed;
+	}
   .header {
     text-align: center;
     margin: 20px 0;
