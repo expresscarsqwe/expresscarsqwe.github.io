@@ -70,4 +70,25 @@ header {
     width: 100%;
     bottom: 0;
   }
-  
+  /* Главный остров */
+.top-menu {
+  background: rgba(255,255,255,.5);
+  box-shadow: 3px 0 7px rgba(0,0,0,.3);
+  padding: 20px;
+        background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/banner.jpg);
+    color: #fff; /*  основной цвет элемент */
+    font-family: sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.top-menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.top-menu {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
