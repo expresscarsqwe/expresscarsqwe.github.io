@@ -14,7 +14,7 @@ function loadNewsData(callback) {
 // Загрузка новостей при загрузке страницы
 window.onload = function() {
   loadNewsData(function(newsData) {
-    const newsContainer = document.getElementById('news-container');
+    const newsContainer = document.getElementById('release-container');
     newsData.forEach(newsItem => {
       const newsDiv = document.createElement('div');
       newsDiv.className = 'news-item';
