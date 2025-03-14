@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,8 @@
     <link rel="icon" href="/img/top/expresscarspenza.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link type="text/css"  rel="stylesheet" href="/css/stile.css">
+    <link rel="stylesheet" href="style.css">
+
 <!--  CODE BY zoliryzik -->
 <!-- Верхушка -->
 <nav class="top-menu">
@@ -19,10 +19,20 @@
   </nav><br>
 </head>
 <body>
-    <h1>Релизы</h1>
-    <input type="text" id="search" placeholder="Поиск...">
-    <ul id="news-list"></ul>
-    <button id="save-news">Сохранить рилизы в JSON</button>
+    <div class="header">
+      <h1>Новости</h1>
+    </div>
+    <div class="container">
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Введите ключевое слово для поиска..." onkeyup="searchNews()">
+      </div>
+      <div id="news-container"></div>
+    </div>
+
+    <footer class="footer">
+      ZoLiryzik Community
+    </footer>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

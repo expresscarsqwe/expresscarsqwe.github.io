@@ -1,48 +1,35 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const newsList = document.getElementById('news-list');
-    const searchInput = document.getElementById('search');
-    const saveButton = document.getElementById('save-news');
-    
-    // Загрузка новостей из JSON файла
-    fetch('news.json')
-        .then(response => response.json())
-        .then(data => {
-            news = data;
-            displayNews(news);
-        })
-        .catch(error => console.error('Ошибка при загрузке новостей:', error));
-    
-    // Функция для отображения новостей
-    function displayNews(filteredNews) {
-        newsList.innerHTML = '';
-        filteredNews.forEach(item => {
-            const li = document.createElement('li');
-            li.textContent = `${item.title}: ${item.content}`;
-            newsList.appendChild(li);
-        });
+// Функция загрузки JSON файла с новостями
+function loadNewsData(callback) {
+  const xhr = new XMLHttpRequest();
+  xhr.overrideMimeType("application/json");
+  xhr.open('GET', 'news.json', true); // путь к вашему JSON файлу
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState == 4 && xhr.status == "200") {
+      callback(JSON.parse(xhr.responseText));
     }
+  };
+  xhr.send(null);
+}
 
-    // Обработка поиска
-    searchInput.addEventListener('input', () => {
-        const searchText = searchInput.value.toLowerCase();
-        const filteredNews = news.filter(item =>
-            item.title.toLowerCase().includes(searchText) ||
-            item.content.toLowerCase().includes(searchText)
-        );
-        displayNews(filteredNews);
+// Загрузка новостей при загрузке страницы
+window.onload = function() {
+  loadNewsData(function(newsData) {
+    const newsContainer = document.getElementById('news-container');
+    newsData.forEach(newsItem => {
+      const newsDiv = document.createElement('div');
+      newsDiv.className = 'news-item';
+      newsDiv.innerHTML = `<h2>${newsItem.title}</h2><p>${newsItem.description}</p>`;
+      newsContainer.appendChild(newsDiv);
     });
+  });
+};
 
-    // Сохранение новостей в JSON
-    saveButton.addEventListener('click', () => {
-        const dataStr = JSON.stringify(news, null, 2);
-        const blob = new Blob([dataStr], { type: 'application/json' });
-        const url = URL.createObjectURL(blob);
-
-        const a = document.createElement('a');
-        a.href = url;
-        a.download = 'news.json';
-        document.body.appendChild(a);
-        a.click();
-        document.body.removeChild(a);
-    });
-});
+// Функция поиска новостей
+function searchNews() {
+  const input = document.getElementById('searchInput').value.toLowerCase();
+  const newsItems = document.getElementsByClassName('news-item');
+  Array.from(newsItems).forEach(item => {
+    const itemText = item.textContent.toLowerCase();
+    item.style.display = itemText.includes(input) ? "" : "none";
+  });
+}

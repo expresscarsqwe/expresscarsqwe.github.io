@@ -1,0 +1,94 @@
+* {
+    margin: 0; /* Отступы от каждого края */
+    padding: 0; /* дополнительный отступ */
+    box-sizing: border-box; /* сообщает браузеру, что значения, указанные для ширины и высоты элемента, будут включать содержимое, отступы и границы. */
+body {
+    font-family: 'Roboto', sans-serif; /* установливает как основной шрифт */
+    background-color: #181818; /* цвет фона элемента */
+    color: #f1f1f1; /*  основной цвет элемент */
+    line-height: 1.6; /* задает межстрочный интервал */
+   
+}
+
+header {
+    background-color: #121212; /* цвет фона элемента */
+    color: #fff; /*  основной цвет элемент */
+    padding: 30px 0; /* внутренний отступ элемента */
+    text-align: center; /* Выравнивания текста */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* тень к элементу */
+}
+/* Стили авы */ 
+.navbar-logo {
+	display: inline-block;
+		/*background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/background.png);*/
+	color: #fff; /*  основной цвет элемент */
+	font-family: sans-serif;
+	background-size: cover;
+	background-attachment: fixed;
+	}
+  .header {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .container {
+    width: 80%;
+    margin: 20px auto;
+  }
+  .search-bar {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  .search-bar input {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  .news-item {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .news-item h2 {
+    margin-top: 0;
+    color: black;
+  }
+  .news-item p {
+    line-height: 1.6;
+    color: black;
+  }
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  /* Главный остров */
+.top-menu {
+  background: rgba(255,255,255,.5);
+  box-shadow: 3px 0 7px rgba(0,0,0,.3);
+  padding: 20px;
+        background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/banner.jpg);
+    color: #fff; /*  основной цвет элемент */
+    font-family: sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.top-menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.top-menu {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
