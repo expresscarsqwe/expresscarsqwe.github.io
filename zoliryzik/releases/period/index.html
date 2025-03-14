@@ -1,43 +1,16 @@
 <!DOCTYPE html>
-<html lang='ru'>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Экспресс-Авто</title>
-    <link rel="icon" href="/img/top/expresscarspenza.png" type="image/png">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-
-
-
-
-
-</style><link type="text/css"  rel="stylesheet" href="/css/stile.css" />
-    <link href="/css/period/styles.css" type="text/css">
-<!--  CODE BY zoliryzik -->
-<!-- Верхушка -->
-<nav class="top-menu">
-    <h2>Экспресс-Авто                                 </h2><br><a class="navbar-logo" href="/zoliryzik/zoliryzik.html"><img src= "/img/top/expresscarspenza.png" width="250" height="100"></a><!--  CODE BY zoliryzik -->
-   <!-- <br><br><ul class="menu-main">-->
-        <!--<li><a href="#">Главная</a></li>-->
-     <!-- </ul>-->
-  </nav>
+    <title>Новости</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<br>
 <body>
-<!--  CODE BY zoliryzik -->
-
-    <div class="header">
-        <h1>Новости</h1>
-    </div>
-    <div class="container">
-        <div class="search-bar">
-            <input type="text" id="searchInput" placeholder="Введите ключевое слово для поиска..." onkeyup="searchNews()">
-        </div>
-        <div id="newsContainer"></div>
-    </div>
-
-    <script src="/js/period/script.js"></script>
-
+    <h1>Новости</h1>
+    <input type="text" id="search" placeholder="Поиск...">
+    <ul id="news-list"></ul>
+    <button id="save-news">Сохранить новости в JSON</button>
+    <script src="script.js"></script>
 </body>
 </html>
