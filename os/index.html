@@ -84,6 +84,7 @@ a {
 </head>
 <br>
 <body>
+    <button onclick="scrollToTop()" id="scrollToTopBtn">⬆</button>
 <!--  CODE BY zoliryzik -->
     <div class="main-section">
         <h1 class='h1'>Особенности</h1>
@@ -177,5 +178,26 @@ a {
         // Находим элемент с id "current-year" и устанавливаем его текстом текущий год
         document.getElementById('current-year').textContent = currentYear;
     </script>
+        </script><!--  CODE BY zoliryzik -->
+    <!--  CODE BY zoliryzik --><script>// JavaScript
+window.onscroll = function() {
+    toggleScrollButton();
+};
+
+function toggleScrollButton() {
+    const button = document.getElementById('scrollToTopBtn');
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
 </body>
 </html>
