@@ -6,6 +6,9 @@ THIS CODE BY zoliryzik
 /*
 Главные стили
 */
+a {
+  text-decoration: none;
+}
 * {
     margin: 0; /* Отступы от каждого края */
     padding: 0; /* дополнительный отступ */
