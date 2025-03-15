@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang='ru'>
 <head>
@@ -20,33 +21,43 @@
     
     
 <!--  CODE BY zoliryzik --><style></style><link type="text/css"  rel="stylesheet" href="/css/stile.css">
-    <link href="https://zoliryzik.github.io/zoliryzik2/assets/css/menu/styles.css" rel="stylesheet" type="text/css">
+    <link href="/css/menu/styles.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="styles.css">
     <!-- Подключение файла со стилями --><!--  CODE BY zoliryzik -->
 <!-- Стили поиска-->
     <style>
-.search-bar {
-    margin: 16px;
-    text-align: center;
-}
-.search-bar input {
-    padding: 8px;
-    width: 80%;
-    font-size: 1em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-.svg-icon {
-  width: 30px;
-  height: 30px;
-  fill: #fff; /* цвет заливки SVG */
-  margin-right: 3%;
-}
 
-.svg-path {
-  stroke: #ff0000; /* цвет обводки */
-  stroke-width: 2; /* толщина обводки */
-}
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px 0;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 5px 0;
+            padding: 10px;
+            background-color: #eaeaea;
+            border-radius: 5px;
+        }
 a {
   text-decoration: none;
 }
@@ -57,31 +68,58 @@ a {
 <!-- Верхушка -->
 <div class="burger-menu">
     <div class="menu-header">
-      <a class="navbar-logo" href="/zoliryzik/newtest"><img class="menu-icon" src="/img/top/expresscarspenza.png" alt="Expresscars Logo"></a>
-      <a class="navbar-logo" href="/zoliryzik/newtest"><h1 class="menu-title">Экспресс Авто</h1></a>
+      <a class="navbar-logo" href="/"><img class="menu-icon" src="/img/top/expresscarspenza.png" alt="Expresscars Logo"></a>
+      <a class="navbar-logo" href="/"><h1 class="menu-title">Экспресс Авто</h1></a>
       <button class="menu-toggle">☰</button>
     </div>
     <nav class="menu-items">
-      <a href="/zoliryzik2/cars">Главная</a>
+      <a href="/">Главная</a>
       <a href="#">Особенности</a>
       <a href="news">Новости</a>
     </nav>
   </div>
 <br>
 <body>
-    <h1>Выбор блоков</h1>
-    <select id="blockSelector">
-        <option value="none">Выберите блок</option>
-        <option value="payment">1. Основное</option>
-        <option value="workTypes">2. Виды работы</option>
-        <option value="carBrands">3. Марки автомобилей</option>
-        <option value="oilChange">4. Замена масла</option>
-        <option value="paymentMethod">5. Способы оплаты</option>
-    </select>
+    <div class="container">
+        <h2>Услуги</h2>
+        <ul>
+            <li>Оплата картой</li>
+            <li>Wi-Fi</li>
+            <li>Предварительная запись</li>
+            <li>Выездной сервис</li>
+            <li>Шиномонтаж</li>
+            <li>Сварочные работы</li>
+            <li>Гарантия на все работы</li>
+        </ul>
 
-    <div id="content"></div>
+        <h2>Виды работ</h2>
+        <ul>
+            <li>Ремонт двигателя</li>
+            <li>Полное сервисное обслуживание</li>
+            <li>Ремонт выхлопной системы</li>
+            <li>Ремонт тормозной системы</li>
+            <li>Компьютерная диагностика автомобиля</li>
+            <li>Замена масла</li>
+        </ul>
 
+        <h2>Марки автомобилей</h2>
+        <ul>
+            <li>Китайские</li>
+            <li>Корейские</li>
+            <li>Японские</li>
+            <li>Европейские</li>
+            <li>Отечественные</li>
+            <li>Импортные</li>
+        </ul>
+
+        <h2>Дополнительная информация</h2>
+        <ul>
+            <li>Посещение с животными разрешено</li>
+            <li>Способы оплаты: банковским переводом, наличными, картой</li>
+            <li>Туалет и парковка для клиентов</li>
+        </ul>
+    </div>
     <script src="script.js"></script>
-    <script src="https://zoliryzik.github.io/zoliryzik2/assets\js\menu-toggle\script.js"></script>
+    <script src="\js\menu-toggle\script.js"></script>
 </body>
 </html>
