@@ -108,6 +108,7 @@ toggleButton.addEventListener('click', () => {
     <button class="button" onclick="openModal('modal1')">Тестовые работы</button>
     <button class="button" onclick="openModal('modal2')">Релизы</button>
     <button class="button" onclick="openModal('modal3')">Делаю</button>
+    <button class="button" onclick="openModal('modal5')">Сделано</button>
     <button class="button" onclick="openModal('modal4')">Тесты</button>
 
     <!-- Модальное окно для Тестовых работ -->
@@ -141,7 +142,15 @@ toggleButton.addEventListener('click', () => {
             <a href="/zoliryzik/newtest" class="button">Делаю</a>
         </div>
     </div>
-
+    <!-- Модальное окно для Делаю -->
+    <div id="modal5" class="modal" onclick="closeModal('modal5')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <h2>Делаю</h2>
+            <button class="button" onclick="openModal('modal11')">Сделано</button>
+            <button class="button" onclick="openModal('modal12')">Не сделано</button>
+        </div>
+    </div>
     <!-- Модальное окно для Тестов -->
     <div id="modal4" class="modal" onclick="closeModal('modal4')">
         <div class="modal-content" onclick="event.stopPropagation()">
