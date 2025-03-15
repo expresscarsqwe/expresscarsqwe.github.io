@@ -585,7 +585,7 @@ a {
         for (i = 0; i < cards.length; i++) {
             h3 = cards[i].getElementsByTagName('h3')[0];
             div = cards[i].getElementsByTagName('card-databox__description')[0];
-            p = cards[i].getElementsByTagName('alt')[0];
+            p = cards[i].getElementsByTagName('p')[0];
             txtValue = h3.textContent || h3.innerText || div.textContent || div.innerText;
             txtValueq = p.textContent || p.innerText || div.textContent || div.innerText;
             console.log(p);
