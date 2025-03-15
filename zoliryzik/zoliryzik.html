@@ -1,71 +1,126 @@
 <!DOCTYPE html>
-<html lang='ru'>
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Экспресс-Авто</title>
-    <link rel="icon" href="../img/top/expresscarspenza.png" type="image/png">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="../img/top/expresscarspenza.png">    <meta property="og:type" content="website" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
-
-    <meta property="og:title" content="Экспресс-Авто" />
-    <meta property="og:description" content="Автосервис, автотехцентр" />
-    <meta property="og:image" content="../img/top/expresscarspenza.png" /><meta property="og:image" content="https://zoliryzik.github.io/expresscarqwe/img/expresscarspenza.png" />
-
-<link type="text/css"  rel="stylesheet" href="/css/stile.css" />
-    <link href="/css/menu/styles.css" rel="stylesheet" type="text/css">
-<link type="text/css"  rel="stylesheet" href="/404.css" />
-<style>a {
-  text-decoration: none;
-}
-</style>
-<!--  CODE BY zoliryzik -->
-<!-- Верхушка -->
-<div class="burger-menu">
-    <div class="menu-header">
-      <a class="navbar-logo" href="/zoliryzik/newtest"><img class="menu-icon" src="/img/top/expresscarspenza.png" alt="Expresscars Logo"></a>
-      <a class="navbar-logo" href="/zoliryzik/newtest"><h1 class="menu-title">Экспресс Авто</h1></a>
-      <button class="menu-toggle">☰</button>
-    </div>
-    <nav class="menu-items">
-      <a href="/zoliryzik2/cars">Главная</a>
-      <a href="#">Особенности</a>
-      <a href="news">Новости</a>
-    </nav>
-  </div>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            color: white;
+            background-color: #0078d4;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #005fa3;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = 'flex';
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+        }
+    </script>
+</head>
 <body>
-<!--  CODE BY zoliryzik -->
-<div class="wrapper">
-  <div class="text_group">
-      <!-- Текст который на странице -->
-    <center><h1 class="text_404">тестовые работы и начальные варианты сайта и многое др.</h1><center>
-    <center><h2 class="text_lost"> <br />это страница создана специально для создателя сайта</h2>
-        <a style="null" href="/" class="shine-button">На главную</a>
-        <a style="null" href="/zoliryzik/releases/period" class="shine-button">Период обновлений</a><br>
-        <center><h1 class="text_404">Релизы</h1><center>
-            <a style="null" href="/zoliryzik/releases/1" class="shine-button">Релиз 1</a>
-            <a style="null" href="/zoliryzik/releases/2" class="shine-button">Релиз 2</a><br>
-            <a style="null" href="/zoliryzik/releases/3" class="shine-button">Релиз 3</a>
-           <a style="null" href="/zoliryzik/releases/4" class="shine-button">Релиз 4</a></center>
-<br><center><h1 class="text_404">Делаю</h1><center>
-           <a style="null" href="/zoliryzik/newtest" class="shine-button">Делаю</a>
-<br><center><h1 class="text_404">Тесты</h1><center>
-    <a style="null" href="/zoliryzik/test/test" class="shine-button">Тест 1</a>
-    <a style="null" href="/zoliryzik/test/test2" class="shine-button">Тест 2</a>
-    <a style="null" href="/zoliryzik/test/test3" class="shine-button">Тест 3</a><br>
-    <a style="null" href="/zoliryzik/test/test4" class="shine-button">Тест 4</a>
-    <a style="null" href="/zoliryzik/test/test5" class="shine-button">Тест 5</a>
-    <a style="null" href="/zoliryzik/test/test6" class="shine-button">Тест 6</a><br>
-    <a style="null" href="/zoliryzik/test/test7" class="shine-button">Тест 7</a>
-    <a style="null" href="/zoliryzik/test/test8" class="shine-button">Тест 8</a>
-    <a style="null" href="/zoliryzik/test/test9" class="shine-button">Тест 9</a>
-</center>
-<!--<br><center><h1 class="text_404">Делается</h1><center><a style="null" href="../zoliryzik/newtest" class="shine-button">Делаю</a></center>-->
-</div>
+    <header>
+        <h1>Экспресс Авто</h1>
+    </header>
+    <main>
+        <button class="button" onclick="openModal('modal1')">Тестовые работы</button>
+        <button class="button" onclick="openModal('modal2')">Релизы</button>
+        <button class="button" onclick="openModal('modal3')">Делаю</button>
+        <button class="button" onclick="openModal('modal4')">Тесты</button>
 
+        <!-- Модальное окно для Тестовых работ -->
+        <div id="modal1" class="modal" onclick="closeModal('modal1')">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h2>Тестовые работы</h2>
+                <a href="/" class="button">На главную</a>
+                <a href="/zoliryzik/releases/period" class="button">Период обновлений</a>
+            </div>
+        </div>
 
+        <!-- Модальное окно для Релизов -->
+        <div id="modal2" class="modal" onclick="closeModal('modal2')">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h2>Релизы</h2>
+                <a href="/zoliryzik/releases/1" class="button">Релиз 1</a>
+                <a href="/zoliryzik/releases/2" class="button">Релиз 2</a>
+                <a href="/zoliryzik/releases/3" class="button">Релиз 3</a>
+                <a href="/zoliryzik/releases/4" class="button">Релиз 4</a>
+            </div>
+        </div>
 
+        <!-- Модальное окно для Делаю -->
+        <div id="modal3" class="modal" onclick="closeModal('modal3')">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <h2>Делаю</h2>
+                <a href="/zoliryzik/newtest" class="button">Делаю</a>
+            </div>
+        </div>
 
+        <!-- Модальное окно для Тестов -->
+        <div id="modal4" class="modal" onclick="closeModal('modal4')">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="close" onclick="closeModal('modal4')">&times;</span>
+                <h2>Тесты</h2>
+                <a href="/zoliryzik/test/test1" class="button">Тест 1</a>
+                <a href="/zoliryzik/test/test2" class="button">Тест 2</a>
+                <a href="/zoliryzik/test/test3" class="button">Тест 3</a>
+                <a href="/zoliryzik/test/test4" class="button">Тест 4</a>
+                <a href="/zoliryzik/test/test5" class="button">Тест 5</a>
+                <a href="/zoliryzik/test/test6" class="button">Тест 6</a>
+                <a href="/zoliryzik/test/test7" class="button">Тест 7</a>
+                <a href="/zoliryzik/test/test8" class="button">Тест 8</a>
+                <a href="/zoliryzik/test/test9" class="button">Тест 9</a>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
