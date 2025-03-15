@@ -52,6 +52,25 @@ a {
 .container {
   place-content: center; 
 }
+/* CSS */
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #2980b9;
+}
 
 </style>
 <!--  CODE BY zoliryzik -->
@@ -84,7 +103,7 @@ a {
         </div>
         <!-- Услуги -->
     
-
+<button onclick="scrollToTop()" id="scrollToTopBtn">⬆ Наверх</button>
             <!-- Главный блок услуг -->
         <div class='container' id='productContainer'>
         <!-- Услуга 1 -->
@@ -603,6 +622,27 @@ a {
         // Находим элемент с id "current-year" и устанавливаем его текстом текущий год
         document.getElementById('current-year').textContent = currentYear;
     </script>
+    <script>// JavaScript
+window.onscroll = function() {
+    toggleScrollButton();
+};
+
+function toggleScrollButton() {
+    const button = document.getElementById('scrollToTopBtn');
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        button.style.display = "block";
+    } else {
+        button.style.display = "none";
+    }
+}
+
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+</script>
        <script src="\js\menu-toggle\script.js"></script>
 </body>
 </html>
