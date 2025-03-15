@@ -585,11 +585,15 @@ a {
             h3 = cards[i].getElementsByTagName('h3')[0];
             div = cards[i].getElementsByTagName('card-databox__description')[0];
             p = cards[i].getElementsByTagName('p')[0];
+            alt = cards[i].getElementsByTagName('alt')[0];
             txtValue = h3.textContent || h3.innerText || div.textContent || div.innerText;
             txtValueq = p.textContent || p.innerText || div.textContent || div.innerText;
+            txtValuew = alt.textContent || alt.innerText || div.textContent || div.innerText;
             if (txtValue.toUpperCase().indexOf(filter) > -1) {
                 cards[i].style.display = "";
             } if (txtValueq.toUpperCase().indexOf(filter) > -1) {
+                cards[i].style.display = "";
+            } if (txtValuew.toUpperCase().indexOf(filter) > -1) {
                 cards[i].style.display = "";
             } else {
                 cards[i].style.display = "none";
