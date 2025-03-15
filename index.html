@@ -55,22 +55,26 @@ a {
 /* CSS */
 #scrollToTopBtn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 10%;
+    right: 5%;
     display: none;
     background-color: #3498db;
     color: white;
     border: none;
-    border-radius: 50%;
-    padding: 10px 15px;
+    border-radius: 50%; /* Закругляем кнопку */
+    padding: 15px;
     cursor: pointer;
+    z-index: 1000; /* Выводим кнопку на передний план */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    font-size: 18px;
 }
 
 #scrollToTopBtn:hover {
     background-color: #2980b9;
+    transform: scale(1.1); /* Увеличение кнопки при наведении */
 }
+
 
 </style>
 <!--  CODE BY zoliryzik -->
@@ -103,7 +107,7 @@ a {
         </div>
         <!-- Услуги -->
     
-<button onclick="scrollToTop()" id="scrollToTopBtn">⬆ Наверх</button>
+<button onclick="scrollToTop()" id="scrollToTopBtn">⬆</button>
             <!-- Главный блок услуг -->
         <div class='container' id='productContainer'>
         <!-- Услуга 1 -->
@@ -642,6 +646,7 @@ function scrollToTop() {
         behavior: 'smooth'
     });
 }
+
 </script>
        <script src="\js\menu-toggle\script.js"></script>
 </body>
