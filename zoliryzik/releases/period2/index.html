@@ -8,15 +8,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
+    <link href="/css/menu/styles.css" rel="stylesheet" type="text/css">
 <!--  CODE BY zoliryzik -->
+        <style>
+a {
+  text-decoration: none;
+}
+
+
+</style>
 <!-- Верхушка -->
-<nav class="top-menu">
-    <h2>Экспресс-Авто                                 </h2><br><a class="navbar-logo" href="/zoliryzik/zoliryzik.html"><img src= "/img/top/expresscarspenza.png" width="250" height="100"></a><!--  CODE BY zoliryzik -->
-   <!-- <br><br><ul class="menu-main">-->
-        <!--<li><a href="#">Главная</a></li>-->
-     <!-- </ul>-->
-  </nav><br>
+<div class="burger-menu">
+    <div class="menu-header">
+      <a class="navbar-logo" href="#"><img class="menu-icon" src="/img/top/expresscarspenza.png" alt="Expresscars Logo"></a>
+      <a class="navbar-logo" href="#"><h1 class="menu-title">Экспресс Авто</h1></a>
+      <button class="menu-toggle">☰</button>
+    </div>
+    <nav class="menu-items">
+      <a href="#">Главная</a>
+      <a href="os">Особенности</a>
+      <a href="news">Новости</a>
+    </nav>
+  </div>
 </head>
 <body>
     <div class="header">
@@ -29,7 +42,11 @@
       <div id="release-container"></div>
     </div>
 
+    <footer class="footer">
+      ZoLiryzik Community
+    </footer>
 
     <script src="script.js"></script>
+    <script src="\js\menu-toggle\script.js"></script>
   </body>
 </html>
