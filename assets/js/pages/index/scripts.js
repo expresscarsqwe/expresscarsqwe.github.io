@@ -31,14 +31,14 @@ const services = [
     {
         id: 5,
         title: "Система охлождения",
-        description: "Замена радиатора, термостата, патрубков<br><br>",
+        description: "Замена радиатора, термостата, патрубков",
         price: "от 500 ₽",
         image: "/assets/img/products/5.jpg"
     },
     {
         id: 6,
         title: "Выхлопные системы",
-        description: "Замена глушителя, резонатора, удаление катализатора, замена гофры<br><br>",
+        description: "Замена глушителя, резонатора, удаление катализатора, замена гофры",
         price: "от 500 ₽",
         image: "/assets/img/products/6.jpg"
     },
@@ -142,7 +142,7 @@ services.forEach(service => {
             </figure>
             <div class='card__databox'>
             <h3 class='card-databox__heading'>${service.title}</h3>
-            <div class='card-databox__description'><p>${service.description}</p><br><br>  </div>
+            <div class='card-databox__description'><p>${service.description}</p>  </div>
             <div class='card-databox__description'><h1>${service.price}</h1></div>
             <button class="button" onclick="openModal(${service.id})">Подробнее</button>
         </div>
