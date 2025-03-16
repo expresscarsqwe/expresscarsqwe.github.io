@@ -25,7 +25,7 @@ const services = [
         id: 4,
         title: "Капитальный ремон",
         description: "Капитальный ремонт двигателя",
-        price: "договорённости",
+        price: "по договорённости",
         image: "/assets/img/products/4.jpg"
     },
     {
