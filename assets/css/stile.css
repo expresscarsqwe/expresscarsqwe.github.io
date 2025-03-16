@@ -193,13 +193,13 @@ background-attachment: fixed;
   background: blueviolet;
 }
 
-.card-poster__image {
+.card-poster__image1 {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.card__databox {
+.card__databox1 {
   display: grid;
   grid-gap: 10px;
   width: 100%;
@@ -208,7 +208,7 @@ background-attachment: fixed;
   background: #00fff2;
 }
 
-.card-databox__heading {
+.card-databox__heading1 {
   overflow: hidden;
   font-family: "Roboto", sans-serif;
   font-size: 20px;
@@ -220,7 +220,7 @@ background-attachment: fixed;
   white-space: nowrap;
 }
 
-.card-databox__description {
+.card-databox__description1 {
   width: 100%;
   display: flex;
   align-items: flex-start;
