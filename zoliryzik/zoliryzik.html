@@ -30,15 +30,62 @@
       <a href="#">Новости</a>
     </nav>
   </div>
-<br><br><br>
-<!--  CODE BY zoliryzik -->
-<div class="wrapper">
-    <div class="text_group">
-        <!-- Текст который на странице -->
-      <center><h1 class="text_404">404</h1><center>
-      <center><h2 class="text_lost"> <br />мы не можем найти вашу страницу!</h2><a href="/" class="shine-button">На главную</a></center><!--  CODE BY zoliryzik -->
-    </div>
-  </div>
+   <center><main>
+        <button class="button" onclick="openModal('modal1')">Главное</button>
+        <button class="button" onclick="openModal('modal2')">Релизы</button><br>
+        <button class="button" onclick="openModal('modal3')">Делаю</button>
+        <button class="button" onclick="openModal('modal4')">Тесты</button><br>
+
+        <!-- Модальное окно для Тестовых работ -->
+        <div id="modal1" class="modal" onclick="closeModal('modal1')">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h2>Тестовые работы</h2>
+                <a href="/" class="button">На главную</a>
+                <a href="/zoliryzik/releases/period" class="button">Период обновлений</a>
+                <a href="/zoliryzik/releases/period2" class="button">Период сделать</a>
+            </div>
+        </div>
+
+        <!-- Модальное окно для Релизов -->
+        <div id="modal2" class="modal" onclick="closeModal('modal2')">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h2>Релизы</h2>
+                <a href="/zoliryzik/releases/1" class="button">Релиз 1</a>
+                <a href="/zoliryzik/releases/2" class="button">Релиз 2</a>
+                <a href="/zoliryzik/releases/3" class="button">Релиз 3</a>
+                <a href="/zoliryzik/releases/4" class="button">Релиз 4</a>
+                <a href="/zoliryzik/releases/5" class="button">Релиз 5</a>
+            </div>
+        </div>
+
+        <!-- Модальное окно для Делаю -->
+        <div id="modal3" class="modal" onclick="closeModal('modal3')">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <h2>Делаю</h2>
+                <a href="/zoliryzik/newtest" class="button">Делаю</a>
+            </div>
+        </div>
+
+        <!-- Модальное окно для Тестов -->
+        <div id="modal4" class="modal" onclick="closeModal('modal4')">
+            <div class="modal-content" onclick="event.stopPropagation()">
+                <span class="close" onclick="closeModal('modal4')">&times;</span>
+                <h2>Тесты</h2>
+                <a href="/zoliryzik/test/test1" class="button">Тест 1</a>
+                <a href="/zoliryzik/test/test2" class="button">Тест 2</a>
+                <a href="/zoliryzik/test/test3" class="button">Тест 3</a>
+                <a href="/zoliryzik/test/test4" class="button">Тест 4</a>
+                <a href="/zoliryzik/test/test5" class="button">Тест 5</a>
+                <a href="/zoliryzik/test/test6" class="button">Тест 6</a>
+                <a href="/zoliryzik/test/test7" class="button">Тест 7</a>
+                <a href="/zoliryzik/test/test8" class="button">Тест 8</a>
+                <a href="/zoliryzik/test/test9" class="button">Тест 9</a>
+            </div>
+        </div>
+    </main></center> 
  
 
     <script src="/assets/js/menu-toggle/script.js"></script>
