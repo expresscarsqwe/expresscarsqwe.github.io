@@ -1,0 +1,460 @@
+/*
+THIS CODE BY zoliryzik
+*/
+
+
+/*
+Главные стили
+*/
+a {
+  text-decoration: none;
+}
+* {
+    margin: 0; /* Отступы от каждого края */
+    padding: 0; /* дополнительный отступ */
+    box-sizing: border-box; /* сообщает браузеру, что значения, указанные для ширины и высоты элемента, будут включать содержимое, отступы и границы. */
+    
+}
+
+.modal-img {
+  width: 250px;
+  height: 250px;
+  padding: 3vb;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.button {
+  background-color: #1e7b76; /* #4CAF50 Зелёный */ /* цвет фона элемента */
+  border: none; /* удаляет все границы у элемента, делая его без рамки */
+  color: white; /*  основной цвет элемент */
+  padding: 15px 32px; /* внутренний отступ элемента */
+  text-align: center; /* Выравнивания текста */
+  text-decoration: none; /* декоративные линии тексту */
+  display: inline-block;
+  font-size: 16px; /* становка размера шрифта */
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* установливает как основной шрифт */
+    background-color: #181818; /* цвет фона элемента */
+    color: #f1f1f1; /*  основной цвет элемент */
+    line-height: 1.6; /* задает межстрочный интервал */
+   
+}
+
+header {
+    background-color: #121212; /* цвет фона элемента */
+    color: #fff; /*  основной цвет элемент */
+    padding: 30px 0; /* внутренний отступ элемента */
+    text-align: center; /* Выравнивания текста */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* тень к элементу */
+}
+
+
+/* Главный остров */
+.top-menu {
+  background: rgba(255,255,255,.5);
+  box-shadow: 3px 0 7px rgba(0,0,0,.3);
+  padding: 20px;
+        background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/banner.jpg);
+    color: #fff; /*  основной цвет элемент */
+    font-family: sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.top-menu:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.top-menu {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+
+/* Стили авы */ 
+.navbar-logo {
+	display: inline-block;
+		/*background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(images/background.png);*/
+	color: #fff; /*  основной цвет элемент */
+	font-family: sans-serif;
+	background-size: cover;
+	background-attachment: fixed;
+	}
+
+/* 
+Кнопки в меню
+ */
+.menu-main {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+
+}
+.menu-main li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+     padding: 0;
+     display: inline-block;
+}
+.menu-main a {
+  text-decoration: none;
+  display: block;
+  position: relative;
+  line-height: 61px;
+  padding-left: 5px;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-family: 'Arimo', sans-serif;
+  font-weight: bold;
+  color: #ffffff;
+  transition:.3s linear;
+  border-radius: 45px;
+  box-shadow: 0 0 5px 5px #e7d5c0;
+
+}
+.menu-main a:before {
+
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: #00fff2;
+  position: absolute;
+  left: 50%;
+  transform: rotate(45deg) translateX(6.5px);
+  opacity: 0;
+  transition: .3s linear;
+
+}
+.menu-main a:hover:before {opacity: 1;}
+@media (max-width: 660px) {
+.menu-main {
+  float: none;
+  padding-top: 20px;
+}
+.top-menu {
+  text-align: center;
+  padding: 20px 0 0 0;
+}
+.menu-main a {padding: 0 10px;}
+.menu-main a:before {transform: rotate(45deg) translateX(-6px);}
+}
+@media (max-width: 600px) {
+.menu-main li {display: block;}
+}
+.menu-main {
+background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(../img/banner.jpg);
+  padding-right: 0;
+color: #fff; /*  основной цвет элемент */
+font-family: sans-serif;
+background-size: cover;
+background-attachment: fixed;
+}
+
+/* */
+.product-image-container {
+  width: 100%;
+  height: 200px;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Карточки с услугами */
+.container {
+  display: grid;
+  margin: 0 auto;
+  width: 100%;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 310px));
+  position: relative;
+  justify-content: space-between;
+  max-width: 1200px;
+  padding: 20px;
+  place-content: center;
+}
+
+.card {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card__poster {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background: blueviolet;
+}
+
+.card-poster__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__databox {
+  display: grid;
+  grid-gap: 10px;
+  width: 100%;
+  padding: 25px 30px 20px 30px;
+  overflow: hidden;
+  background: #00fff2;
+}
+
+.card-databox__heading {
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  padding-right: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #000; /*  основной цвет элемент */
+  white-space: nowrap;
+}
+
+.card-databox__description {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  line-height: 1.3;
+  color: #333; /*  основной цвет элемент */
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.card-databox__read-more-btn {
+  color: #fff; /*  основной цвет элемент */
+  transition: background 0.2s ease;
+  font-family: "Roboto", sans-serif;
+  max-width: fit-content;
+  font-size: 13px;
+  padding: 5px 15px;
+  background: #3f51b5;
+  border-radius: 4px;
+}
+
+.card-databox__read-more-btn:hover {
+  background: #35459b;
+  color: #fff; /*  основной цвет элемент */
+} 
+
+/* FOOTER ЧТО В НИЗУ */
+/* Новый стиль для фиолетовой полоски */
+.blue-stripe {
+  background-color: #00fff2;
+  height: 2px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* Модельные стили */
+
+body {font-family: Arial, Helvetica, sans-serif;}
+    
+/* Модальный (фон) */
+.modal {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  z-index: 1; /* Сидеть на вершине */
+  padding-top: 100px; /* Расположение коробки */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Включите прокрутку, если это необходимо */
+  background-color: rgb(0,0,0); /* Цвет запасной вариант  */
+  background-color: rgba(0,0,0,0.4); /*Черный с непрозрачностью */
+}
+
+/* Модальное содержание */
+.modal-content {
+  position: relative;
+  background-color: #006400;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Добавить анимацию */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* Кнопка закрытия */
+.close {
+  color: white; /*  основной цвет элемент */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000; /*  основной цвет элемент */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white; /*  основной цвет элемент */
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white; /*  основной цвет элемент */
+}
+
+/* Модальный (фон) */
+.modal2 {
+  display: none; /* Скрыто по умолчанию */
+  position: fixed; /* Оставаться на месте */
+  z-index: 1; /* Сидеть на вершине */
+  padding-top: 100px; /* Расположение коробки */
+  left: 0;
+  top: 0;
+  width: 100%; /* Полная ширина */
+  height: 100%; /* Полная высота */
+  overflow: auto; /* Включите прокрутку, если это необходимо */
+  background-color: rgb(0,0,0); /* Цвет запасной вариант  */
+  background-color: rgba(0,0,0,0.4); /*Черный с непрозрачностью */
+}
+
+/* Модальное содержание */
+.modal2-content {
+  position: relative;
+  background-color: #006400;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 80%;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Добавить анимацию */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* Кнопка закрытия */
+.close2, .close3, .close4, .close5, .close6, .close7, .close8, .close9 {
+  color: white; /*  основной цвет элемент */
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close2:hover, .close3:hover, .close4:hover, .close5:hover, .close6:hover, .close7:hover, .close8:hover, .close9:hover,
+.close2:focus, .close3:focus, .close4:focus, .close5:focus, .close6:focus, .close7:focus, .close8:focus, .close9:focus {
+  color: #000; /*  основной цвет элемент */
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+.modal2-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white; /*  основной цвет элемент */
+}
+
+.modal2-body {padding: 2px 16px;}
+
+.modal2-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white; /*  основной цвет элемент */
+}
+
+/* Для кнопки  */
+.shine-button {
+  text-decoration: none;
+  display: inline-block;
+  padding: 10px 30px;
+  margin: 10px 20px;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #00fff2;
+  border-radius: 8px;
+  font-family: 'Montserrat', sans-serif;
+  color: #00fff2; /*  основной цвет элемент */
+  transition: .2s ease-in-out;
+}
+.shine-button:before {
+  content: "";
+  background: linear-gradient(to right, #6814cd 0%, #3163f3 100%);
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  top: -8px;
+  left: -75px;
+  transform: skewX(-45deg);
+}
+.shine-button:hover {
+  background: #00fff2;
+  color: #fff; /*  основной цвет элемент */
+}
+.shine-button:hover:before {
+  left: 150px;
+  transition: .5s ease-in-out;
+}
+
+
+/*
+THIS CODE BY zoliryzik
+*/

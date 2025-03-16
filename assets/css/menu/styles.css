@@ -1,0 +1,86 @@
+/* Верхняя шапка */
+.menu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: rgba(0, 0, 0, 0.8); /* Тёмный полупрозрачный фон */
+    border-bottom: 1px solid rgba(50, 50, 50, 0.3); /* Лёгкая тёмная граница */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Тёмная тень */
+    backdrop-filter: blur(10px);
+}
+
+.menu-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.menu-title {
+    flex-grow: 1;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff; /* Белый текст */
+    text-align: center;
+    margin: 0;
+}
+
+/* Кнопка меню */
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #fff; /* Белый цвет иконки */
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.menu-toggle:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1); /* Лёгкий светлый фон при наведении */
+}
+
+/* Выдвигающееся меню */
+.menu-items {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 99.9%;
+    background: rgba(0, 0, 0, 0.9); /* Тёмный фон */
+    border: 1px solid rgba(50, 50, 50, 0.5); /* Тёмная граница */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5); /* Тёмная тень */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    animation: slideDown 0.3s ease;
+}
+
+.menu-items a {
+    text-decoration: none;
+    font-size: 18px;
+    margin: 10px 0;
+    color: #ccc; /* Светло-серый текст */
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-items a:hover {
+    background-color: rgba(100, 100, 100, 0.5); /* Серый фон при наведении */
+    color: #4CAF50; /* Цвет текста */
+    border-radius: 4px;
+}
+  
+  /* Анимация для выдвигающегося меню */
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
