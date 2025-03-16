@@ -1,5 +1,5 @@
 // Подгрузка данных из JSON и заполнение списков
-fetch('features.json')
+fetch('/assets/json/pages/os/features.json')
     .then(response => response.json())
     .then(data => {
         populateList('services-list', data.services);
