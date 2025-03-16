@@ -2,7 +2,7 @@
 const services = [
     {
         id: 1,
-        title: "Компьютерная диагностика",
+        title: "ПК диагностика",
         description: "Компьютерная диагностика автомобиля, адаптация дросселя и др.",
         price: "от 500 ₽",
         image: "/assets/img/products/1.jpg"
