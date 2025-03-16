@@ -55,6 +55,13 @@ const services = [
         description: "Замена масла, фильтров",
         price: "от 500 ₽",
         image: "/assets/img/products/8.jpg"
+    },
+    {
+        id: 9,
+        title: "Тормозная система",
+        description: "Диагностика тормозных систем",
+        price: "от 500 ₽",
+        image: "/assets/img/products/9.jpg"
     }
     // Добавьте другие услуги
 ];
@@ -121,7 +128,7 @@ const servicess = [
         title: "Тормозная система",
         description: "Диагностика тормозных систем",
         price: "от 500 ₽",
-        image: "/assets/img/products/8.jpg"
+        image: "/assets/img/products/9.jpg"
     }
     // Добавьте другие услуги
 ];
