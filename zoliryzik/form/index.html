@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма для перехода</title>
+    <style>
+        .form-container {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px auto;
+            width: 300px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .submit-button,
+        .copy-button {
+            width: 100%;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+        .submit-button:hover,
+        .copy-button:hover {
+            background-color: #0056b3;
+        }
+        .error-message {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form id="dataForm">
+            <label for="title">Заголовок карточки:</label>
+            <input type="text" id="title" name="title" required>
+            
+            <label for="description">Описание:</label>
+            <input type="text" id="description" name="description" required>
+            
+            <label for="price">Цена:</label>
+            <input type="text" id="price" name="price" required>
+            
+            <label for="image">URL на картинку:</label>
+            <input type="text" id="image" name="image" required>
+
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" required>            
+            <button type="button" class="submit-button" onclick="openNewPage()">Открыть</button>
+            <button type="button" class="copy-button" onclick="copyToClipboard()">Скопировать</button>
+            <p class="error-message" id="errorMessage"></p>
+        </form>
+    </div>
+<script>
+    function openNewPage() {
+        const form = document.getElementById('dataForm');
+        const errorMessage = document.getElementById('errorMessage');
+        const title = form.querySelector('[name="title"]').value.trim();
+        const description = form.querySelector('[name="description"]').value.trim();
+        const price = form.querySelector('[name="price"]').value.trim();
+        const image = form.querySelector('[name="image"]').value.trim();
+        const id = form.querySelector('[name="id"]').value.trim();
+        
+        if (!title|| !description || !price || !image || !id) {
+            errorMessage.textContent = 'Все поля должны быть заполнены.';
+            return;
+        }
+        
+        const objectData = {
+            id: id,
+            title: title,
+            description: description,
+            price: price,
+            image: image
+        };
+
+        const newTab = window.open('', '_blank');
+        if (newTab) {
+            const pageTemplate = `
+                <!DOCTYPE html>
+                <html lang="ru">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Содержимое формы</title>
+                    <style>
+                        body {
+                            font-family: Arial, sans-serif;
+                            margin: 20px;
+                            line-height: 1.6;
+                        }
+                        pre {
+                            background: #f4f4f4;
+                            padding: 15px;
+                            border: 1px solid #ccc;
+                            overflow-x: auto;
+                        }
+                    </style>
+                </head>
+                <body>
+                    <h1>Содержимое формы</h1>
+                    <pre>${JSON.stringify(objectData, null, 4)}</pre>
+                </body>
+                </html>
+            `;
+            newTab.document.write(pageTemplate);
+            newTab.document.close();
+        } else {
+            errorMessage.textContent = 'Браузер заблокировал открытие новой вкладки.';
+        }
+    }
+
+    function copyToClipboard() {
+        const form = document.getElementById('dataForm');
+        const title = form.querySelector('[name="title"]').value.trim();
+        const description = form.querySelector('[name="description"]').value.trim();
+        const price = form.querySelector('[name="price"]').value.trim();
+        const image = form.querySelector('[name="image"]').value.trim();
+        const id = form.querySelector('[name="id"]').value.trim();
+
+        if (!title || !description || !price || !image || !id) {
+            alert('Все поля должны быть заполнены перед копированием.');
+            return;
+        }
+
+        const objectData = `ID: ${id}\nЗаголовок: ${title}\nОписание: ${description}\nЦена: ${price}\nURL на картинку: ${image}`;
+        navigator.clipboard.writeText(objectData)
+            .then(() => alert('Данные успешно скопированы!'))
+            .catch(() => alert('Ошибка копирования.'));
+    }
+</script>
+</body>
+</html>
