@@ -62,6 +62,13 @@ const services = [
         description: "Диагностика тормозных систем",
         price: "от 500 ₽",
         image: "/assets/img/products/9.jpg"
+    },
+    {
+        id: 10,
+        title: "Дымогенератор",
+        description: "Диагностика авто на подсос воздуха Дымогенератором",
+        price: "от 500 ₽",
+        image: "/assets/img/products/10.jpg"
     }
     // Добавьте другие услуги
 ];
@@ -129,6 +136,13 @@ const servicess = [
         description: "Диагностика тормозных систем",
         price: "от 500 ₽",
         image: "/assets/img/products/9.jpg"
+    },
+    {
+        id: 10,
+        title: "Диагностика авто на подсос воздуха Дымогенератором",
+        description: "Диагностика авто на подсос воздуха Дымогенератором",
+        price: "от 500 ₽",
+        image: "/assets/img/products/10.jpg"
     }
     // Добавьте другие услуги
 ];
