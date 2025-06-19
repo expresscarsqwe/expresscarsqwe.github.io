@@ -1,0 +1,199 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Генератор services и servicess</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 2rem;
+    }
+    h2 {
+      margin-top: 2rem;
+    }
+    .form-section {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .form-group {
+      margin-bottom: 1rem;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.5rem;
+      margin-top: 0.3rem;
+      font-size: 1rem;
+    }
+    button {
+      padding: 0.6rem 1.2rem;
+      background: #007bff;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    pre {
+      background: #222;
+      color: #0f0;
+      padding: 1rem;
+      white-space: pre-wrap;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Добавление услуг</h1>
+
+  <!-- Форма для services -->
+  <div class="form-section">
+    <h2>Добавить в <code>services</code></h2>
+    <div class="form-group">
+      <label for="s_id">ID</label>
+      <input type="number" id="s_id" min="1">
+    </div>
+    <div class="form-group">
+      <label for="s_title">Название</label>
+      <input type="text" id="s_title">
+    </div>
+    <div class="form-group">
+      <label for="s_description">Описание</label>
+      <textarea id="s_description" rows="2"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="s_price">Цена</label>
+      <input type="text" id="s_price" value="от 500 ₽">
+    </div>
+    <div class="form-group">
+      <label for="s_image">Ссылка на изображение</label>
+      <input type="text" id="s_image" value="/assets/img/products/1.jpg">
+    </div>
+    <button onclick="addToServices()">Добавить в services</button>
+
+    <h3>Массив <code>services</code></h3>
+    <pre id="servicesOutput">const services = [\n];</pre>
+  </div>
+
+  <!-- Форма для servicess -->
+  <div class="form-section">
+    <h2>Добавить в <code>servicess</code></h2>
+    <div class="form-group">
+      <label for="ss_id">ID</label>
+      <input type="number" id="ss_id" min="1">
+    </div>
+    <div class="form-group">
+      <label for="ss_title">Название</label>
+      <input type="text" id="ss_title">
+    </div>
+    <div class="form-group">
+      <label for="ss_description">Описание</label>
+      <textarea id="ss_description" rows="2"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="ss_price">Цена</label>
+      <input type="text" id="ss_price" value="от 500 ₽">
+    </div>
+    <div class="form-group">
+      <label for="ss_image">Ссылка на изображение</label>
+      <input type="text" id="ss_image" value="/assets/img/products/1.jpg">
+    </div>
+    <button onclick="addToServicess()">Добавить в servicess</button>
+
+    <h3>Массив <code>servicess</code></h3>
+    <pre id="servicessOutput">const servicess = [\n];</pre>
+  </div>
+
+  <script>
+    const services = [];
+    const servicess = [];
+
+    function escapeQuotes(str) {
+      return str.replace(/"/g, '\\"');
+    }
+
+    function formatObject(obj) {
+      return `    {
+        id: ${obj.id},
+        title: "${escapeQuotes(obj.title)}",
+        description: "${escapeQuotes(obj.description)}",
+        price: "${escapeQuotes(obj.price)}",
+        image: "${escapeQuotes(obj.image)}"
+    }`;
+    }
+
+    function updateOutputs() {
+      document.getElementById("servicesOutput").textContent =
+        "const services = [\n" + services.map(formatObject).join(",\n") + "\n];";
+
+      document.getElementById("servicessOutput").textContent =
+        "const servicess = [\n" + servicess.map(formatObject).join(",\n") + "\n];";
+    }
+
+    function addToServices() {
+      const obj = {
+        id: parseInt(document.getElementById("s_id").value),
+        title: document.getElementById("s_title").value.trim(),
+        description: document.getElementById("s_description").value.trim(),
+        price: document.getElementById("s_price").value.trim(),
+        image: document.getElementById("s_image").value.trim()
+      };
+
+      if (!obj.id || !obj.title || !obj.description || !obj.price || !obj.image) {
+        alert("Пожалуйста, заполните все поля для services.");
+        return;
+      }
+
+      services.push(obj);
+      updateOutputs();
+      clearServiceForm();
+    }
+
+    function addToServicess() {
+      const obj = {
+        id: parseInt(document.getElementById("ss_id").value),
+        title: document.getElementById("ss_title").value.trim(),
+        description: document.getElementById("ss_description").value.trim(),
+        price: document.getElementById("ss_price").value.trim(),
+        image: document.getElementById("ss_image").value.trim()
+      };
+
+      if (!obj.id || !obj.title || !obj.description || !obj.price || !obj.image) {
+        alert("Пожалуйста, заполните все поля для servicess.");
+        return;
+      }
+
+      servicess.push(obj);
+      updateOutputs();
+      clearServicessForm();
+    }
+
+    function clearServiceForm() {
+      document.getElementById("s_id").value = "";
+      document.getElementById("s_title").value = "";
+      document.getElementById("s_description").value = "";
+      document.getElementById("s_price").value = "от 500 ₽";
+      document.getElementById("s_image").value = "/assets/img/products/1.jpg";
+    }
+
+    function clearServicessForm() {
+      document.getElementById("ss_id").value = "";
+      document.getElementById("ss_title").value = "";
+      document.getElementById("ss_description").value = "";
+      document.getElementById("ss_price").value = "от 500 ₽";
+      document.getElementById("ss_image").value = "/assets/img/products/1.jpg";
+    }
+  </script>
+
+</body>
+</html>
