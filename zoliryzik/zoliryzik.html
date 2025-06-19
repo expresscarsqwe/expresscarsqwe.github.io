@@ -90,7 +90,7 @@ text-decoration: none;
     <button class="button" onclick="openModal('modal2')">Релизы</button><br>
     <button class="button" onclick="openModal('modal3')">Делаю</button>
     <button class="button" onclick="openModal('modal4')">Тесты</button><br>
-
+    <button class="button" onclick="openModal('modal5')">Editor</button><br>
     <!-- Модальное окно для Тестовых работ -->
     <div id="modal1" class="modal" onclick="closeModal('modal1')">
         <div class="modal-content" onclick="event.stopPropagation()">
@@ -140,6 +140,18 @@ text-decoration: none;
             <a href="/zoliryzik/test/test9" class="button">Тест 9</a>
         </div>
     </div>
+
+          
+    <!-- Модальное окно для Editor -->
+    <div id="modal5" class="modal" onclick="closeModal('modal5')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <span class="close" onclick="closeModal('modal5')">&times;</span>
+            <h2>Editor</h2>
+            <a href="/zoliryzik/editorcard.html" class="button">Editor</a>
+        </div>
+    </div>
+
+
 </main></center>
  
 
