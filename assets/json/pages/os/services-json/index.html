@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Services JSON</title>
+    <style>
+        body {
+            font-family: monospace;
+            background: #f5f5f5;
+            margin: 20px;
+        }
+        pre {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Массив services из scripts.js</h1>
+    <pre id="output"></pre>
+
+    <script>
+        // Путь к вашему JS-файлу
+        const scriptPath = '/assets/js/pages/index/scripts.js';
+
+        fetch(scriptPath)
+            .then(response => {
+                if (!response.ok) throw new Error(`HTTP ${response.status}`);
+                return response.text();
+            })
+            .then(jsCode => {
+                // Ищем объявление const services = [ ... ];
+                // Учитываем возможные пробелы, переносы строк и вложенные скобки
+                const regex = /const\s+services\s*=\s*(\[[\s\S]*?\n\]);/;
+                const match = jsCode.match(regex);
+                if (match && match[1]) {
+                    try {
+                        // Безопасно парсим массив (eval, но строка из надёжного источника)
+                        const servicesArray = eval(`(${match[1]})`);
+                        document.getElementById('output').textContent = JSON.stringify(servicesArray, null, 2);
+                    } catch (e) {
+                        document.getElementById('output').textContent = 'Ошибка парсинга массива: ' + e.message;
+                        document.getElementById('output').classList.add('error');
+                    }
+                } else {
+                    document.getElementById('output').textContent = 'Массив services не найден. Проверьте формат объявления в файле.';
+                    document.getElementById('output').classList.add('error');
+                }
+            })
+            .catch(err => {
+                document.getElementById('output').textContent = 'Ошибка загрузки файла: ' + err.message;
+                document.getElementById('output').classList.add('error');
+            });
+    </script>
+</body>
+</html>
