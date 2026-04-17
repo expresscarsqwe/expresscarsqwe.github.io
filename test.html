@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Test</title></head>
+<body>
+<h1>API Redirect Test</h1>
+<button onclick="test()">Test</button>
+<script>
+async function test() {
+  const res = await fetch('https://api.mr-vixie.su/api/content');
+  const text = await res.text();
+  console.log(text);
+  if (text.includes('window.top.location.href')) {
+    alert('REDIRECT HTML received!');
+  } else {
+    alert('JSON received');
+  }
+}
+</script>
+</body>
+</html>
