@@ -182,6 +182,7 @@ servicess.forEach(serviceq => {
     <a href="tel:+79603211010" class="shine-button">Позвонить</a>
     <a href="https://t.me/+79603211010" class="shine-button">Телеграм</a>
     <a href="https://wa.me/79603211010" class="shine-button">WhatsApp</a>
+    <a href="https://max.ru/79603211010" class="shine-button">MAX</a>
   </div>
 </div>
 
